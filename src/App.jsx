@@ -1,5 +1,6 @@
 import React from 'react'
 import Home from './pages/Home'
+import Error404 from './pages/Error404'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
@@ -16,8 +17,8 @@ const router = createBrowserRouter([
 		element: <h1>about</h1>
 	},
 	{
-		path: '/404',
-		element: <h1>404</h1>
+		path: '*',
+		element: <Error404 />
 	},
 ]);
 
