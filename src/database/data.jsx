@@ -1,4 +1,4 @@
-const apartments = [
+const data = [
 	{
 		"id": "c67ab8a7",
 		"title": "Appartement cosy",
@@ -618,4 +618,4 @@ const apartments = [
 	}
 ]
 
-export default apartments;
+export default data;

@@ -2,6 +2,7 @@ import React from 'react'
 import Home from './pages/Home'
 import Error404 from './pages/Error404'
 import About from './pages/About'
+import Lodging from './pages/Lodging'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
@@ -10,8 +11,8 @@ const router = createBrowserRouter([
     element: <Home />,
   },
 	{
-		path: "/apartment/:id",
-		element: <h1>apartment</h1>
+		path: "/lodging/:id",
+		element: <Lodging />
 	},
 	{
 		path: '/about',

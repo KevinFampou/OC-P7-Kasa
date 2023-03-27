@@ -1,14 +1,14 @@
 import './ApartmentGrid.scss'
-import apartments from '../database/apartments'
-import ApartmentCard from './ApartmentCard'
+import data from '../database/data'
+import Card from './Card'
 
 export default function ApartmentGrid() {
 
     return (
         <main className='home_apartment'>
-            {apartments.map(apartment => {
+            {data.map(apartment => {                                    
                 return (
-                    <ApartmentCard
+                    <Card
                         key={apartment.id}
                         id={apartment.id}
                         title={apartment.title}
