@@ -6,10 +6,10 @@ import Lodging from './pages/Lodging'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
-  {
+  	{
     path: "/",
     element: <Home />,
-  },
+ 	},
 	{
 		path: "/lodging/:id",
 		element: <Lodging />

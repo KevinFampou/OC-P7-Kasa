@@ -1,6 +1,6 @@
 import './Lodging.scss'
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import data from '../database/data'
 import Header from "../components/Header";
 import SlideShow from "../components/Slideshow"
@@ -11,7 +11,7 @@ import redStar from '../assets/red_star.png';
 
 
 export default function Lodging() {
-	
+
 	const [imageSlideShow, setImageSlideShow] = useState([]);
 
 	const idLodging = useParams('id').id;
@@ -21,6 +21,10 @@ export default function Lodging() {
 		const targetLodging = data.filter(apartment => apartment.id === idLodging);
 		setImageSlideShow(targetLodging[0].pictures);
 	}, [idLodging]);
+
+	if (targetLodging.length === 0) {
+		return <Navigate to="/error" replace />;
+	  }
 
 	const name = targetLodging[0].host.name.split(' '); 
 	const rating = targetLodging[0].rating;
